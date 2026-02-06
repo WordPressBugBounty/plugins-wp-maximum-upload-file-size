@@ -21,16 +21,16 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 	/**
 	 * Render the dashboard widget content with transient cache.
 	 */
-	function codepopular_dashboard_widget_render(): void {
+	function codepopular_dashboard_widget_render() {
 
-		// ✅ PROMOTION (cached for 12 hours)
+		// ✅ PROMOTION (cached for 2 hours)
 		$promo_data = get_transient( 'codepopular_promo_data' );
 
 		if ( false === $promo_data ) {
 			$promo_response = wp_remote_get( 'https://raw.githubusercontent.com/shamimbdpro/promotion/main/promotion.json', array( 'timeout' => 10 ) );
 			if ( ! is_wp_error( $promo_response ) ) {
 				$promo_data = json_decode( wp_remote_retrieve_body( $promo_response ), true );
-				set_transient( 'codepopular_promo_data', $promo_data, 12 * HOUR_IN_SECONDS );
+				set_transient( 'codepopular_promo_data', $promo_data, 2 * HOUR_IN_SECONDS );
 			}
 		}
 
@@ -45,14 +45,14 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 			<?php
 		}
 
-		// ✅ BLOG POSTS (cached for 6 hours)
+		// ✅ BLOG POSTS (cached for 2 hours)
 		$posts_data = get_transient( 'codepopular_blog_posts' );
 
 		if ( false === $posts_data ) {
 			$post_response = wp_remote_get( 'https://codepopular.com/wp-json/wp/v2/posts?per_page=4&categories=19', array( 'timeout' => 10 ) );
 			if ( ! is_wp_error( $post_response ) ) {
 				$posts_data = json_decode( wp_remote_retrieve_body( $post_response ) );
-				set_transient( 'codepopular_blog_posts', $posts_data, 6 * HOUR_IN_SECONDS );
+				set_transient( 'codepopular_blog_posts', $posts_data, 2 * HOUR_IN_SECONDS );
 			}
 		}
 
@@ -98,7 +98,7 @@ if ( ! function_exists( 'codepopular_wmufs_promotions' ) ) {
 	function codepopular_wmufs_promotions() { ?>
         <div class="notice notice-success is-dismissible hideWmufsNotice">
             <div class="codepopular_notice">
-                <h4><?php esc_html_e( 'Thank you for using our Plugin to Increase Upload Size!', 'wp-maximum-upload-file-size' ); ?></h4>
+                <h4><?php esc_html_e( 'Thank you for using our Plugin EasyMedia!', 'wp-maximum-upload-file-size' ); ?></h4>
                 <p><?php esc_html_e( 'We are glad that you are using our plugin... Thank you to everyone.', 'wp-maximum-upload-file-size' ); ?></p>
                 <div class="codepopular__buttons">
                     <a href="https://ko-fi.com/codepopular?utm_source=maxuploader-dashboard-feed" target="_blank" class="codepopular__button btn__green dashicons-heart">
