@@ -4,8 +4,8 @@ Tags: increase upload limit, increase file size limit, large file upload, easyme
 Donate link: https://ko-fi.com/codepopular
 Requires at least: 3.0
 Requires PHP: 7.0
-Tested up to: 6.9
-Stable tag: 3.0.4
+Tested up to: 7.0.2
+Stable tag: 3.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -133,6 +133,10 @@ Or if needed, install manually:
 
 
 == Changelog ==
+
+= 3.0.5 =
+-------------
+* Latest Version (7.0.2) Compatible with WordPress
 
 = 3.0.4 =
 -------------
