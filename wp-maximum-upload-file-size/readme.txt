@@ -4,8 +4,8 @@ Tags: increase upload limit, increase file size limit, large file upload, easyme
 Donate link: https://ko-fi.com/codepopular
 Requires at least: 3.0
 Requires PHP: 7.0
-Tested up to: 7.0.2
-Stable tag: 3.0.5
+Tested up to: 6.9
+Stable tag: 3.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,9 +134,19 @@ Or if needed, install manually:
 
 == Changelog ==
 
+= 3.0.6 =
+-------------
+* Redesigned EasyMedia admin dashboard: header, segmented tabs, and cleaner settings layout
+* Improved System Status tables with grouped sections and readable columns
+* Refined sidebar Pro card and header version badges (Free / Pro + Upgrade)
+* Polished forms, toggles, FAQ blocks, and restore-settings styling
+* Updated CodePopular dashboard feed widget (GitHub promotion source, footer links)
+
 = 3.0.5 =
 -------------
-* Latest Version (7.0.2) Compatible with WordPress
+* Tested up to WordPress 6.9 (latest stable)
+* Verified compatibility with WordPress 6.9.x admin and media screens
+* General stability improvements for current WordPress releases
 
 = 3.0.4 =
 -------------
@@ -251,7 +261,7 @@ Or if needed, install manually:
 
 = Does this plugin work with all servers and hosting providers? =
 
-Yes, it works with all servers. However, please note that server-adjusted limits can't be changed from a WordPress plugin. If the server's set limit is 16MB, you can't increase it to 128MB via WordPress. However, in that case, we chunk the large uploaded file into smaller pieces as a reflection of the upload time, which can be slower. But its possible to upload a big file if your server set upload limit is higher. Install the plugin, and it'll inform you of the limits and the necessary actions. inally we upload file files even your site dose not allow it.
+Yes, it works with all servers. However, please note that server-adjusted limits can't be changed from a WordPress plugin. If the server's set limit is 16MB, you can't increase it to 128MB via WordPress. However, in that case, we chunk the large uploaded file into smaller pieces as a reflection of the upload time, which can be slower. But its possible to upload a big file if your server set upload limit is higher. Install the plugin, and it'll inform you of the limits and the necessary actions. finally we upload file files even your site dose not allow it.
 
 = Increase maximum execution time, but not working? =
 
